@@ -23,9 +23,9 @@
                 </button>
             </div>
         </form>
-        <form id="edit-form" method="post" class="">
+        <form id="edit-form" method="post" class="hide">
             <p>Edite sua tarefa</p>
-            <div>
+            <div class="form-control">
                 <input type="text" name="edit-input" id="edit-input">
                 <button type="submit">
                     <i class="fa fa-check-circle-o"></i>
@@ -33,7 +33,7 @@
             </div>
             <button id="cancel-edit-btn">Cancelar</button>
         </form>
-        <div id="toolar">
+        <div id="toolbar">
             <div id="search">
                 <h4>Pesquisar</h4>
                 <form method="post">
@@ -43,17 +43,18 @@
                     </button>
                 </form>
             </div>
+            <div id="filter">
+                <h4>Filtrar:</h4>
+                <select name="filter-select" id="filter-select">
+                    <option value="all">Todos</option>
+                    <option value="done">Feitos</option>
+                    <option value="todo">A fazer</option>
+                </select>
+            </div>
         </div>
-        <div id="filter">
-            <h4>Filtrar:</h4>
-            <select name="filter-select" id="filter-select">
-                <option value="all">Todos</option>
-                <option value="done">Feitos</option>
-                <option value="todo">A fazer</option>
-            </select>
-        </div>
+        
         <div id="todo-list">
-            <div class="todo">
+            <div class="todo done">
                 <h3>Estou fazendo:</h3>
                 <button class="finish-todo">
                     <i class="fa fa-check-square-o"></i>
