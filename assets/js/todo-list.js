@@ -7,6 +7,35 @@ const editInput = document.querySelector("#edit-input");
 const cancelEditBtn = document.querySelector("#cancel-edit-btn");
 
 // Funçoes
+const saveTodo = (text) => {
+
+    const todo = document.createElement("div");
+    todo.classList.add("todo");
+
+    const todoTitle = document.createElement("h3");
+    todoTitle.innerText = text;
+    todo.appendChild(todoTitle);
+
+    const doneBtn = document.createElement("button");
+    doneBtn.classList.add("finish-todo");
+    doneBtn.innerHTML = '<i class="fa fa-check-square-o"></i>';
+    todo.appendChild(doneBtn)
+
+    const editBtn = document.createElement("button");
+    editBtn.classList.add("edit-todo");
+    editBtn.innerHTML = '<i class="fa fa-pencil-square-o"></i>';
+    todo.appendChild(editBtn)
+
+    const removeBtn = document.createElement("button");
+    removeBtn.classList.add("remove-todo");
+    removeBtn.innerHTML = '<i class="fa fa-times-circle-o"></i>';
+    todo.appendChild(removeBtn);
+
+    todoList.appendChild(todo);
+
+    todoInput.value = "";
+    todoInput.focus();
+};
 
 // Eventos
 todoForm.addEventListener("submit", (e) => {
@@ -15,7 +44,6 @@ todoForm.addEventListener("submit", (e) => {
     const inputValue = todoInput.value
 
     if(inputValue) {
-        console.log(inputValue)
-        // save todo
+        saveTodo(inputValue)
     }
 })
