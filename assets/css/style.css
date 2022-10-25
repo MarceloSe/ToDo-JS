@@ -98,7 +98,8 @@ input, select{
 #toolbar{
     padding: 1rem;
     border-bottom: 1px solid #ccc;
-    display: flex;
+    /*display: flex;*/ 
+    display: none;
 }
 
 #toolbar h4 {
@@ -161,5 +162,5 @@ input, select{
     color: #fff;
     text-decoration: line-through;
     font-style: italic;
-    
+
 }
